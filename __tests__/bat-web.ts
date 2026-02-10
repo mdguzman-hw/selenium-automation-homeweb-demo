@@ -63,7 +63,6 @@ interface CustomerPortalHeaderElements
  * TODO: Investigate and review FR fail cases
  * TODO: Remove hard coded URLs
  * TODO: Improve element set up and selector determination
- *
  */
 describe( 'Build Acceptance Test', () =>
 {
@@ -105,7 +104,7 @@ describe( 'Build Acceptance Test', () =>
             target_customer_portal: CUSTOMER_PORTAL_URL,
             locale: LANGUAGE.FRENCH
         }
-    ] )( '$lang', ( { target_homeweb, locale, target_customer_portal } ) =>
+    ] )( '$lang', ( { lang, target_homeweb, locale, target_customer_portal } ) =>
     {
         // 4: Tests - Homeweb
         describe( 'Homeweb', () =>
@@ -214,7 +213,7 @@ describe( 'Build Acceptance Test', () =>
             } );
 
             // 4.3: Test - Navigate to Homeweb
-            test( translate( 'bat_id_navigate' ), async () =>
+            test( `BAT-WEB-${lang}-001`, async () =>
             {
                 await chromeDriver.get( target_homeweb );
                 window = await chromeDriver.getWindowHandle();
@@ -225,7 +224,7 @@ describe( 'Build Acceptance Test', () =>
             describe( 'Public Landing', () =>
             {
                 // 4.4.1: Test - Resources
-                test( translate( 'bat_id_resources' ), async () =>
+                test( `BAT-WEB-${lang}-002`, async () =>
                 {
                     await PUBLIC_LANDING_EN.testResource( PUBLIC_LANDING_ELEMENTS.resource_neurodiversity, FIND.CSS );
                     await PUBLIC_LANDING_EN.testResource( PUBLIC_LANDING_ELEMENTS.resource_emotional_intelligence, FIND.CSS );
@@ -238,7 +237,7 @@ describe( 'Build Acceptance Test', () =>
             describe( 'Login - Personal', () =>
             {
                 // 4.5.1: Test - Personal Login
-                test( translate( 'bat_id_login_personal' ), async () =>
+                test( `BAT-WEB-${lang}-003`, async () =>
                 {
                     await PUBLIC_LANDING_EN.testButton( PUBLIC_LANDING_ELEMENTS.button_sign_in );
                     await LOGIN_EN.testInput( LOGIN_ELEMENTS.input_email, personal.email );
@@ -252,7 +251,7 @@ describe( 'Build Acceptance Test', () =>
             describe( 'Authenticated - Personal', () =>
             {
                 // 4.6.1: Test - Resource
-                test( translate( 'bat_id_authenticated_resource' ), async () =>
+                test( `BAT-WEB-${lang}-004`, async () =>
                 {
                     const resource_target = 'https://homeweb.ca/user/articles/56252b81e40e6f50062aa714';
                     await chromeDriver.get( resource_target );
@@ -260,7 +259,7 @@ describe( 'Build Acceptance Test', () =>
                 } );
 
                 // 4.6.2: Test - Sentio kick out
-                test( translate( 'bat_id_sentio' ), async () =>
+                test( `BAT-WEB-${lang}-005`, async () =>
                 {
                     const sentio_resource_target = 'https://homeweb.ca/app/en/resources/62c5a1e929ed9c1608d0434b';
                     await chromeDriver.get( sentio_resource_target );
@@ -269,7 +268,7 @@ describe( 'Build Acceptance Test', () =>
                 } );
 
                 // 4.6.3: Test - Logout
-                test( translate( 'bat_id_logout' ), async () =>
+                test( `BAT-WEB-${lang}-006`, async () =>
                 {
                     await AUTHENTICATED_HEADER_EN.testMenu( AUTHENTICATED_HEADER_ELEMENTS.button_menu );
                     await AUTHENTICATED_HEADER_EN.testLogout( AUTHENTICATED_HEADER_ELEMENTS.button_logout );
@@ -280,7 +279,7 @@ describe( 'Build Acceptance Test', () =>
             describe( 'Login - Demo', () =>
             {
                 // 4.7.1: Test - Demo Login
-                test( translate( 'bat_id_login_demo' ), async () =>
+                test( `BAT-WEB-${lang}-007`, async () =>
                 {
                     await PUBLIC_LANDING_EN.testButton( PUBLIC_LANDING_ELEMENTS.button_sign_in );
                     await LOGIN_EN.testInput( LOGIN_ELEMENTS.input_email, demo.email );
@@ -294,7 +293,7 @@ describe( 'Build Acceptance Test', () =>
             describe( 'Authenticated - Demo', () =>
             {
                 // 4.8.1: Test - Kick outs
-                test( translate( 'bat_id_kickouts' ), async () =>
+                test( `BAT-WEB-${lang}-008`, async () =>
                 {
                     // Child Care
                     const childcare_resource_target = 'https://homeweb.ca/app/en/resources/579ba4db88db7af01fe6ddd4';
@@ -316,7 +315,7 @@ describe( 'Build Acceptance Test', () =>
                 } );
 
                 // 4.8.2: Test - Course Consent
-                test( translate( 'bat_id_course' ), async () =>
+                test( `BAT-WEB-${lang}-009`, async () =>
                 {
                     const course_target = 'https://homeweb.ca/app/en/resources/564a36083392100756dd3e32';
                     await chromeDriver.get( course_target );
@@ -326,7 +325,7 @@ describe( 'Build Acceptance Test', () =>
                 } );
 
                 // 4.8.3: Test - Embedded mobile links
-                test( translate( 'bat_id_embedded' ), async () =>
+                test( `BAT-WEB-${lang}-010`, async () =>
                 {
                     // Resource 1
                     const resource_1 = 'https://homeweb.ca/summertime-and-your-health?embedded';
@@ -406,7 +405,7 @@ describe( 'Build Acceptance Test', () =>
             } );
 
             // 5.3: Test - Insights
-            test( translate( 'bat_id_customer_portal' ), async () =>
+            test( `BAT-WEB-${lang}-011`, async () =>
             {
                 // 5.3.1: Navigate to Customer Portal
                 await chromeDriver.get( target_customer_portal );

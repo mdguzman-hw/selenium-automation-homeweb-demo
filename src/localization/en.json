@@ -49,18 +49,6 @@
   "public_landing_route_toolkit": "/en/homewood/navigating-uncertainty-your-mental-health-toolkit",
   "public_landing_route_help_number": "tel:1-800-663-1142",
 
-  "bat_id_navigate": "BAT-WEB-EN-001",
-  "bat_id_resources": "BAT-WEB-EN-002",
-  "bat_id_login_personal": "BAT-WEB-EN-003",
-  "bat_id_authenticated_resource": "BAT-WEB-EN-004",
-  "bat_id_sentio": "BAT-WEB-EN-005",
-  "bat_id_logout": "BAT-WEB-EN-006",
-  "bat_id_login_demo": "BAT-WEB-EN-007",
-  "bat_id_kickouts": "BAT-WEB-EN-008",
-  "bat_id_course": "BAT-WEB-EN-009",
-  "bat_id_embedded": "BAT-WEB-EN-010",
-  "bat_id_customer_portal": "BAT-WEB-EN-011",
-
   "login_id_email": "LOGIN-EN-001",
   "login_id_password": "LOGIN-EN-002",
   "login_id_next": "LOGIN-EN-003",

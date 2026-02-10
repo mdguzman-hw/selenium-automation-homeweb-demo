@@ -49,18 +49,6 @@
   "public_landing_route_toolkit": "/fr/homewood/gerer-l-incertitude-votre-boite-a-outils-sur-la-sante-mentale",
   "public_landing_route_help_number": "tel:1-866-398-9505",
 
-  "bat_id_navigate": "BAT-WEB-FR-001",
-  "bat_id_resources": "BAT-WEB-FR-002",
-  "bat_id_login_personal": "BAT-WEB-FR-003",
-  "bat_id_authenticated_resource": "BAT-WEB-FR-004",
-  "bat_id_sentio": "BAT-WEB-FR-005",
-  "bat_id_logout": "BAT-WEB-FR-006",
-  "bat_id_login_demo": "BAT-WEB-FR-007",
-  "bat_id_kickouts": "BAT-WEB-FR-008",
-  "bat_id_course": "BAT-WEB-FR-009",
-  "bat_id_embedded": "BAT-WEB-FR-010",
-  "bat_id_customer_portal": "BAT-WEB-FR-011",
-
   "login_id_email": "LOGIN-FR-001",
   "login_id_password": "LOGIN-FR-002",
   "login_id_next": "LOGIN-FR-003",
