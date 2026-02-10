@@ -28,8 +28,6 @@ export class BaseTest {
      * Constructor
      */
     constructor (locale: LANGUAGE, driver: WebDriver, target: string, component: string, handle?: string) {
-        setLanguage(locale);
-
         this.chromeDriver = driver;
         this.originalWindow = handle;
         this.logFilename = generateLogFileName(`${component}-${locale}`);
