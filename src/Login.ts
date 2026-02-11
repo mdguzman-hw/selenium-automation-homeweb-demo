@@ -88,9 +88,9 @@ export class Login extends BaseTest {
                 await this.chromeDriver.wait(until.elementLocated(By.id(ID.PASSWORD)))
                 break;
             case translate('login_submit'):
+                // 4.2: Submit button clicked, Domain Check - Homeweb
                 const url = new URL(await this.chromeDriver.getCurrentUrl());
 
-                // 4.2: Domain Check - Homeweb
                 if (url.origin === HOMEWEB_DOMAIN) {
                     // 4.2.1: Route Check - Dashboard
                     if (url.pathname === route) {

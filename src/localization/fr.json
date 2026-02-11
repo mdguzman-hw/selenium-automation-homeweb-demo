@@ -53,7 +53,7 @@
   "login_id_password": "LOGIN-FR-002",
   "login_id_next": "LOGIN-FR-003",
   "login_id_sign_in": "LOGIN-FR-004",
-  "login_identifier_submit": "[type=\"submit\"]",
+  "login_identifier_button": "[type=\"submit\"]",
   "login_next": "Suivant",
   "login_sign_in": "Se connecter",
   "login_sign_in_route": "/app/fr/homeweb/dashboard",
