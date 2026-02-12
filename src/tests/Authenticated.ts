@@ -85,9 +85,7 @@ export class Authenticated extends BaseTest {
      */
     public async testModal() {
         // 1: Find the button
-        const button = await this.chromeDriver.findElement(
-            By.css('button[data-bs-target="#resourceGate"]')
-        );
+        const button = await this.chromeDriver.wait(until.elementLocated(By.css('button[data-bs-target="#resourceGate"]')), TIMEOUT.S_FIVE);
 
         // 2: Click the button
         await this.chromeDriver.sleep(TIMEOUT.S_HALF);
@@ -100,7 +98,6 @@ export class Authenticated extends BaseTest {
             until.elementLocated(By.id("resourceGate")),
             5000
         );
-        this.chromeDriver
         await this.chromeDriver.wait(until.elementIsVisible(modal), 5000);
 
         // 4: Assert modal is displayed

@@ -48,7 +48,7 @@ Status Legend
 ### 🟢 ALL 🟢
 - yarn test
 
-### 🔵 SMOKE TEST 🔵
+### 🔵 SMOKE TEST - LEGACY 🔵
 Pure TypeScript
 - *yarn smoke-legacy*
 ### 🟡 SMOKE TEST 🟡
